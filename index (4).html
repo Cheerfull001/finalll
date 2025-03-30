@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tdXNpYyI+PHBhdGggZD0iTTkgMThWNWwxMi0ydjEzIi8+PHBhdGggZD0iTTkgMThjMCAxLjEtLjkgMi0yIDJzLTItLjktMi0yIDEtMiAyLTIgMiAuOSAyIDIiLz48cGF0aCBkPSJNMjEgMTZjMCAxLjEtLjkgMi0yIDJzLTItLjktMi0yIDEtMiAyLTIgMiAuOSAyIDIiLz48L3N2Zz4=" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>DJ Gato Félix - Sistema de Gerenciamento de Eventos</title>
+    <script>
+      // Configurar base path para o GitHub Pages 
+      document.addEventListener('DOMContentLoaded', function() {
+        // Verificar se estamos no GitHub Pages
+        if (window.location.hostname.includes('github.io')) {
+          // Criar uma tag base para resolver problemas de caminho relativo
+          const baseElement = document.createElement('base');
+          
+          if (window.location.pathname.includes('/gogo/')) {
+            baseElement.href = '/gogo/';
+          } else {
+            // Para outros repositórios
+            const pathSegments = window.location.pathname.split('/');
+            const repoName = pathSegments[1];
+            baseElement.href = `/${repoName}/`;
+          }
+          
+          document.head.prepend(baseElement);
+          
+          // Configurar para modo de demonstração no Github Pages
+          window.__DEMO_MODE__ = true;
+          console.log("Rodando em modo de demonstração (GitHub Pages)");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./client/src/main.tsx"></script>
+  </body>
+</html>
